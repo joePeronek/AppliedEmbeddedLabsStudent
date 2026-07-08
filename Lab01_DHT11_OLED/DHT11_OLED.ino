@@ -32,13 +32,6 @@ void loop() {
   // Convert Celsius to Fahrenheit
   float temperatureF = temperatureC * 9.0 / 5.0 + 32.0;
 
-  // Print to Serial Monitor
-  Serial.print("Temperature: ");
-  Serial.print(temperatureF, 1);
-  Serial.print(" F\tHumidity: ");
-  Serial.print(humidity, 1);
-  Serial.println("%");
-
   // Update OLED
   display.clearDisplay();
   display.setTextColor(SSD1306_WHITE);
@@ -47,7 +40,7 @@ void loop() {
   display.setCursor(0, 0);
   display.print("T: ");
   display.print(temperatureF, 1);
-  display.write(247);
+  display.write(247); // 247 is the degree symbol
   display.print("F");
 
   display.setCursor(0, 32);
