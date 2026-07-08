@@ -20,12 +20,6 @@ void setup() {
 
   dht.begin();
 
-  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-    Serial.println("OLED initialization failed!");
-    while (true)
-      ;
-  }
-
   display.clearDisplay();
   display.display();
 }
