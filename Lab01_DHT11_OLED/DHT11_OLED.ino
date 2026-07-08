@@ -16,7 +16,7 @@ DHT dht(DHT_PIN, DHTTYPE);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 void setup() {
-  Serial.begin(9600);
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
   dht.begin();
 
